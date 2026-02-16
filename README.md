@@ -3,10 +3,10 @@
 This extension runs OpenAI’s Whisper TTS in the browser via Transformers.js, streaming audio through Whisper-compatible ONNX pipelines that lean on WebGPU for accelerated speech-to-text without leaving the current tab.
 
 - Captures **tab audio** (not microphone)
-- Runs **Whisper locally in-browser** via `@xenova/transformers`
 - Injects an overlay subtitle UI into the active page
 - Supports many languages
 - Text is fully selectable for any use like copy and paste
+- Live captions are seamless and not an always on top window
 ![Demo](demoimage.png)
 ## 1) Install dependencies
 
