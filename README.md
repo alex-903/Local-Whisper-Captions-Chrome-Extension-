@@ -5,7 +5,7 @@ Chrome extension that:
 - Captures **tab audio** (not microphone)
 - Runs **Whisper locally in-browser** via `@xenova/transformers`
 - Injects an overlay subtitle UI into the active page
-
+![Demo](demo1.png)
 ## 1) Install dependencies
 
 ```bash
