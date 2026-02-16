@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Local Whisper Captions",
+  "description": "Capture tab audio, run Whisper locally in-browser, and overlay live subtitles on the active page.",
+  "version": "0.1.40",
+  "minimum_chrome_version": "121",
+  "action": {
+    "default_title": "Local Whisper Captions",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabCapture",
+    "offscreen",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "https://huggingface.co/*",
+    "https://*.huggingface.co/*",
+    "https://cdn-lfs.huggingface.co/*",
+    "https://hf.co/*",
+    "https://*.hf.co/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; worker-src 'self'"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "audio-processor.js",
+        "whisper-worker.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
