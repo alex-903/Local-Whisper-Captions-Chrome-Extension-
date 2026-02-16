@@ -45,4 +45,3 @@ This generates `dist/`.
 - After loading once, the model stays warm for the extension session and subsequent starts are much faster.
 - First run downloads model weights from Hugging Face, then reuses browser cache.
 - Some restricted pages (`chrome://*`, Chrome Web Store, some extension pages) do not allow script injection.
-- `whisper-tiny.en` is fastest; `whisper-base.en` is slower but usually more accurate.
